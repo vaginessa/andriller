@@ -2,11 +2,13 @@ name: Python Package using Conda
 
 on: [push]
 
+workflow_dispatch:
+
 jobs:
   build-linux:
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 5
+      max-parallel: 8
 
     steps:
     - uses: actions/checkout@v3
